@@ -2,10 +2,10 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Bản đồ vị trí hiện tại</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <style>
         body,
         html {
@@ -21,45 +21,53 @@
 </head>
 
 <body>
-    <div id="map"></div>
+<br/>
+<button
+        onclick="window.location.href='http://192.168.0.251:3000/demo_javascript.html'"
+>
+    Move to Page 2
+</button>
+<br/>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        // Khởi tạo bản đồ
-        const map = L.map('map').setView([0, 0], 13); // Tạm thời dùng [0, 0] cho đến khi có vị trí thực
+<div id="map"></div>
 
-        // Thêm lớp bản đồ nền từ OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    // Khởi tạo bản đồ
+    const map = L.map('map').setView([0, 0], 13); // Tạm thời dùng [0, 0] cho đến khi có vị trí thực
 
-        // Kiểm tra trình duyệt có hỗ trợ geolocation
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                position => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
+    // Thêm lớp bản đồ nền từ OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
 
-                    // Di chuyển bản đồ đến vị trí hiện tại
-                    map.setView([lat, lon], 16);
+    // Kiểm tra trình duyệt có hỗ trợ geolocation
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
 
-                    // Đánh dấu vị trí hiện tại
-                    L.marker([lat, lon]).addTo(map)
-                        .bindPopup("Bạn đang ở đây.")
-                        .openPopup();
-                },
-                error => {
-                    alert("Không thể lấy vị trí của bạn: " + error.message);
-                },
-                {
-                    enableHighAccuracy: false,
-                    maximumAge: 0
-                }
-            );
-        } else {
-            alert("Trình duyệt của bạn không hỗ trợ định vị.");
-        }
-    </script>
+                // Di chuyển bản đồ đến vị trí hiện tại
+                map.setView([lat, lon], 16);
+
+                // Đánh dấu vị trí hiện tại
+                L.marker([lat, lon]).addTo(map)
+                    .bindPopup("Bạn đang ở đây.")
+                    .openPopup();
+            },
+            error => {
+                alert("Không thể lấy vị trí của bạn: " + error.message);
+            },
+            {
+                enableHighAccuracy: false,
+                maximumAge: 0
+            }
+        );
+    } else {
+        alert("Trình duyệt của bạn không hỗ trợ định vị.");
+    }
+</script>
 </body>
 
 </html>
