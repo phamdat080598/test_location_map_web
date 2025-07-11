@@ -31,9 +31,9 @@
 
 <div id="map"></div>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"
-        onerror="alert('Không thể tải leaflet.js – kiểm tra kết nối hoặc thời gian thiết bị!')">
-</script>
+
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
 <script>
     // Khởi tạo bản đồ
     const map = L.map('map').setView([0, 0], 13); // Tạm thời dùng [0, 0] cho đến khi có vị trí thực
