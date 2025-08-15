@@ -27,16 +27,16 @@
     <script>
         function redirectToLogin() {
             // Lấy phần query string của URL hiện tại
-            const query = window.location.search;
+//            const query = window.location.search;
 
             // Base URL đích bạn muốn chuyển đến
-            const targetBaseUrl = "https://st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html";
+//            const targetBaseUrl =
+// "https://st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html";
+//https://phamdat080598.github.io/test_location_map_web/st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html?response_type=code&client_id=ja-kyosai-relay&scope=openid+email+phone+profile+ul_session&redirect_uri=ja-kyosai-app%3A%2F%2Fst.api.ja-kyosai.or.jp%2Flogin-authorization-callback&code_challenge=b9-XD6vwgMA2m1_8D66SmwXjHZoMaomkdRiTvAcbGeQ&code_challenge_method=S256&state=d3a64298f282eeca9c207c2e6e1f84b2e78ca435b8d3af33957c976d23618aa6&prompt=login&utm_source=ja_kyosai_app&utm_medium=app&fbAppInstId=79b2b1bbaa20d523c56288f70d133859
+//          const finalUrl = targetBaseUrl + query;
 
-            // Ghép lại URL đầy đủ
-            const finalUrl = targetBaseUrl + query;
-
-            // Chuyển hướng
-            window.location.href = finalUrl;        }
+            window.location.href = "https://st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html?response_type=code&client_id=ja-kyosai-relay&scope=openid+email+phone+profile+ul_session&redirect_uri=ja-kyosai-app%3A%2F%2Fst.api.ja-kyosai.or.jp%2Flogin-authorization-callback&code_challenge=uM1Sy2OThguAQOiyCxWR_B1Uk7nSVqegqx7BR_EotlM&code_challenge_method=S256&state=c1404eb1ecedc188ddd57f77618325e5848e3d14df33da0392f666d1ba89b579&prompt=login&utm_source=ja_kyosai_app&utm_medium=app&fbAppInstId=79b2b1bbaa20d523c56288f70d133859";
+            }
     </script>
 </head>
 <body>
