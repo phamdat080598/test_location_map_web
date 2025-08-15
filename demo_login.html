@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Redirect</title>
+    <script>
+        function redirectToLogin() {
+            // Lấy tham số query từ URL hiện tại
+            const params = window.location.search;
+
+            // Đường dẫn mới, cùng tham số
+            const newUrl = 'link.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/ios.html' + params;
+
+            // Chuyển hướng sang trang mới
+            window.location.href = newUrl;
+        }
+    </script>
+</head>
+<body>
+<h2>Login</h2>
+<button onclick="redirectToLogin()">Login</button>
+</body>
+</html>
