@@ -26,12 +26,17 @@
     <title>Login Redirect</title>
     <script>
         function redirectToLogin() {
-            const params = window.location.search;
+            // Lấy phần query string của URL hiện tại
+            const query = window.location.search;
 
-            const androidUrl = 'st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html' + params;
+            // Base URL đích bạn muốn chuyển đến
+            const targetBaseUrl = "https://st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html";
 
-            window.location.href = androidUrl;
-        }
+            // Ghép lại URL đầy đủ
+            const finalUrl = targetBaseUrl + query;
+
+            // Chuyển hướng
+            window.location.href = finalUrl;        }
     </script>
 </head>
 <body>
