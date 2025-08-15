@@ -31,14 +31,14 @@
 
 //https://phamdat080598.github.io/test_location_map_web/demo_login.html?response_type=code&client_id=ja-kyosai-relay&scope=openid email phone profile ul_session&redirect_uri=ja-kyosai-app://st.api.ja-kyosai.or.jp/login-authorization-callback&code_challenge=TFODQ-drgRzYPzMb3TMmQro2Ic-6jtvFQagCxtWceyY&code_challenge_method=S256&state=9917dc05ef04f13e96ca6e965f32b4f54c720bd432c1001ba04b7aa9b7db6a20&prompt=login
             // Đường dẫn mới, cùng tham số
-            const newUrl = 'link.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/ios.html' + params;
+            const androidUrl = 'st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html' + params;
      //       https://phamdat080598.github.io/test_location_map_web/demo_login.html
 //https://phamdat080598.github.io/test_location_map_web/link.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/ios.html
 
 
             // Chuyển hướng sang trang mới
-          //  window.location.href = newUrl;
-          window.location.href='link.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/ios.html'
+            window.location.href = androidUrl;
+          //window.location.href='st.api.ja-kyosai.or.jp/contents/jakyosaiapp_link/login-authorization-callback/android.html'
         }
     </script>
 </head>
