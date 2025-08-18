@@ -5,7 +5,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Bản đồ vị trí hiện tại</title>
-    <link rel="stylesheet" href="leaflet.css"/>
+    <link rel="stylesheet" href="/libs/leaflet/leaflet.css" />
     <style>
         body,
         html {
@@ -31,10 +31,7 @@
 
 <div id="map"></div>
 
-
-<script src="leaflet.js"
-        onerror="alert('Không thể tải leaflet.js – kiểm tra kết nối hoặc thời gian thiết bị!')">
-</script>
+<script src="/libs/leaflet/leaflet.js"></script>
 <script>
     // Khởi tạo bản đồ
     const map = L.map('map').setView([0, 0], 13); // Tạm thời dùng [0, 0] cho đến khi có vị trí thực
